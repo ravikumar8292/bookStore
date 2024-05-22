@@ -4,8 +4,8 @@ import banner from "../../public/banner.jpg"
 const Banner = () => {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 mt-12 md:mt-48 order-2 md:order-1">
+      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
+        <div className="w-full md:w-1/2 mt-12 md:mt-32 order-2 md:order-1">
           <div className="space-y-12">
             <h1 className="text-4xl font-bold">
               Hello, Welcomes here to learn something{" "}
@@ -31,9 +31,9 @@ const Banner = () => {
             </label>
            </div>
           </div>
-            <button className="btn mt-6 btn-secondary">Subscribe</button>
+            <button className="btn mt-6 btn-secondary bg-pink-500 text-white hover:bg-black">Subscribe</button>
         </div>
-        <div className="w-full md:w-1/2 order-1 mt-8">
+        <div className="w-full md:w-1/2 order-1 ">
             <img src={banner} className="w-92 h-92" alt="" srcset="" />
         </div>
       </div>

@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
+// import bookStore from "../../public/logo1.png"
+import { FaBook } from 'react-icons/fa';
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
+
+  // const handleClick = ()=>{
+  //   setIsActive(true);
+  // }
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -9,37 +17,38 @@ const Navbar = () => {
       } else {
         setSticky(false);
       }
+    };
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
-    };
+   
   }, []);
   const navItems = (
     <>
       <li>
-        <a>Home</a>
+        <a href="/" className={`hover:text-sky-700`}>Home</a>
       </li>
       <li>
-        <a>Course</a>
+        <a href="/course" className="hover:text-sky-700">Course</a>
       </li>
       <li>
-        <a>Contact</a>
+        <a href="/contact" className="hover:text-sky-700">Contact</a>
       </li>
       <li>
-        <a>About</a>
+        <a href="/about" className="hover:text-sky-700 active:bg-blue-600" >About</a>
       </li>
     </>
   );
   return (
     <div
-      className={`max-w-screen-2xl container mx-auto md:px-20 p-4 fixed top-0 left-0 right-0 ${
+      className={`max-w-screen-2xl container mx-auto md:px-20 px-4 py-2 fixed top-0 left-0 right-0 z-50 ${
         sticky
-          ? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out"
+          ? "sticky-navbar shadow-md bg-gray-200 duration-300 transition-all ease-in-out"
           : ""
       }`}
     >
-      <div className="navbar">
+      <div className="navbar z-10">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -65,13 +74,17 @@ const Navbar = () => {
               {navItems}
             </ul>
           </div>
-          <a className="font-bold text-2xl cursor-pointer">bookStore</a>
+          <a className="font-bold text-2xl cursor-pointer flex gap-0 md:gap-1">
+            <div className="hidden md:block m-1"><FaBook /></div>
+            <p>book<span className="text-pink-500">Store</span></p>
+            {/* <img src={bookStore} className="w-48 h-27" alt="" srcset="" /> */}
+          </a>
         </div>
         <div className="navbar-end space-x-3">
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
           </div>
-          <div className="hidden md:block ">
+          <div className="hidden md:block border-2xl bg-white rounded-md">
             <label className="px-3 py-2 border rounded-md flex items-center gap-2">
               <input
                 type="text"
