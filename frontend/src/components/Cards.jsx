@@ -4,12 +4,12 @@ const Cards = ({item}) => {
     console.log(item);
   return (
     <div>
-      <div className="my-4">
-        <div className="card w-[300px] h-[390px] bg-base-100 shadow-xl hover:scale-105 duration-300">
+      <div className="my-4 ml-2">
+        <div className="card w-[300px] h-[390px] bg-base-100 shadow-xl dark:border dark:shadow dark:shadow-white hover:scale-105 duration-300">
           <figure>
             <img
               src={item.image}
-              alt="Shoes"
+              alt="books"
             />
           </figure>
           <div className="card-body">

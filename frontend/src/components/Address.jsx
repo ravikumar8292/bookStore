@@ -8,7 +8,7 @@ const Address = () => {
       <div className="">
         <h1 className='mt-3 mb-2 text-xl'>Address</h1>
         <p className='flex items-center gap-2'><span className='cursor-pointer'><FaMapMarkerAlt/></span><p>Ravi Book Store</p></p>
-        <p className='text-sm text-slate-600 mt-1'>Shop No. A-1, BBC Tower, below Bank Of India, near City International School, Aundh, Pune, Maharashtra 411007</p>
+        <p className='text-sm text-slate-600 mt-1 dark:text-white'>Shop No. A-1, BBC Tower, below Bank Of India, near City International School, Aundh, Pune, Maharashtra 411007</p>
       </div>
       <div className="mt-4">
         <h1 className='text-xl'>Mobile No</h1>
@@ -16,7 +16,7 @@ const Address = () => {
       </div>
       <div className="mt-4">
         <h1 className='text-xl'>Email</h1>
-        <p className='flex items-center gap-2 mt-1'><span><FaMailBulk/></span><p className='text-sky-800'>raviraj@gmail.com</p></p>
+        <p className='flex items-center gap-2 mt-1'><span><FaMailBulk/></span><p className='text-sky-800 dark:text-blue-500'>raviraj@gmail.com</p></p>
       </div>
       <div className="flex mt-5 gap-4">
         <span className='cursor-pointer hover:scale-110'><FaFacebook size={30} color='#3b82f6'/></span>
