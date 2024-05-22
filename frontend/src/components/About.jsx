@@ -7,13 +7,13 @@ const About = () => {
     <>
     <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-20">
 
-        <div className="w-full md:w-1/2 order-1 py-8 ">
+        <div className="w-full md:w-1/2 order-1 md:py-8 py-6 ">
             <img src={outlet} className="w-[100%] h-[100%]" alt="" srcset="" />
         </div>
 
-        <div className="w-full md:w-1/2 mt-12 md:mt-32 order-2 md:order-1">
+        <div className="w-full md:w-1/2 mt-2 md:mt-32 order-2 md:order-1">
           <div className="space-y-12">
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-4xl font-bold md:mx-0 mx-1">
               Hello, Welcomes to Ravi Book Store , {" "}
               <span className="text-pink-500">learn new something everyday!!!</span>
             </h1>
@@ -37,7 +37,7 @@ const About = () => {
             </label>
            </div>
           </div>
-            <button className="btn mt-6 btn-secondary bg-pink-500 text-white hover:bg-black">Subscribe</button>
+            <button className="btn mt-6 btn-secondary bg-pink-500 text-white hover:bg-pink-600 duration-200">Subscribe</button>
         </div>
     </div>
     <div className="mt-16 flex flex-col gap-4 max-w-screen-2xl container mx-auto md:px-20 px-4">

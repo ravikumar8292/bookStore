@@ -10,7 +10,7 @@ const ContactUs = () => {
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pt-28">
         <div className="flex flex-col md:flex-row">
-          <div className="w-full md:w-1/2 mt-12 md:mt-32 order-2 md:order-1">
+          <div className="w-full md:w-1/2 mt-6 md:mt-32 ml-1 md:ml-0 order-2 md:order-1">
             <div className="space-y-12">
               <h1 className="text-4xl font-bold">
                 Hello, Welcomes to Ravi Book Store ,{" "}
@@ -42,23 +42,23 @@ const ContactUs = () => {
                 </label>
               </div>
             </div>
-            <button className="btn mt-6 btn-secondary bg-pink-500 text-white hover:bg-black">
+            <button className="btn mt-6 btn-secondary bg-pink-500 text-white hover:bg-pink-600 duration-200">
               Subscribe
             </button>
           </div>
 
-          <div className="w-full md:w-1/2 order-1 mx-5 mt-8">
+          <div className="w-full md:w-1/2 order-1 md:mx-5 md:mt-8">
             <img src={outlet} className="w-[1200px] h-[100%]" alt="" srcset="" />
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 mt-12 p-8 border rounded-2xl bg-base-100 shadow-xl ">
-          <div className="col-span-2 p-2">
+        <div className="gap-4 mt-12 p-8 border rounded-2xl bg-base-100 shadow-xl flex flex-col md:flex-row">
+          <div className="col-span-2 p-2 order-1">
             <div className="grid grid-cols-2 gap-4">
               <Form />
             </div>
           </div>
-          <div className="">
+          <div className="order-2">
             <Address />
           </div>
         </div>

@@ -1,6 +1,7 @@
 
 import './App.css'
 import About from './about/Abouts'
+import SignUp from './components/SignUp'
 import Contacts from './contactUs/Contacts'
 import Courses from './courses/Courses'
 import Home from './home/Home'
@@ -22,6 +23,7 @@ function App() {
       <Route path='/course' element={<Courses />}/>
       <Route path='/contact' element={<Contacts />}/>
       <Route path='/about' element={<About />}/>
+      <Route path='/signup' element={<SignUp />}/>
     </Routes>
    </div>
     </>
