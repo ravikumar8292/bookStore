@@ -8,8 +8,8 @@ import Address from "./Address";
 const ContactUs = () => {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pt-28">
-        <div className="flex flex-col md:flex-row">
+      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pt-12">
+        <div className="flex flex-col md:flex-row ml-5">
           <div className="w-full md:w-1/2 mt-6 md:mt-32 ml-1 md:ml-0 order-2 md:order-1">
             <div className="space-y-12">
               <h1 className="text-4xl font-bold">

@@ -5,13 +5,13 @@ import outlet from "../../public/outlet.png";
 const About = () => {
   return (
     <>
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-20">
+    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-12">
 
         <div className="w-full md:w-1/2 order-1 md:py-8 py-6 ">
             <img src={outlet} className="w-[100%] h-[100%]" alt="" srcset="" />
         </div>
 
-        <div className="w-full md:w-1/2 mt-2 md:mt-32 order-2 md:order-1">
+        <div className="w-full md:w-1/2 mt-2 md:mt-32 mr-5 order-2 md:order-1">
           <div className="space-y-12">
             <h1 className="text-4xl font-bold md:mx-0 mx-1">
               Hello, Welcomes to Ravi Book Store , {" "}

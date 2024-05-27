@@ -9,3 +9,11 @@
 body{
   font-family: "Poppins", sans-serif;
 }
+
+.slick-dots li button::before {
+  color: rgb(141, 141, 255); /* Change this to your desired dot color */
+}
+
+.slick-dots li.slick-active button::before {
+  color: rgb(19, 1, 1); /* Change this to your desired active dot color */
+}

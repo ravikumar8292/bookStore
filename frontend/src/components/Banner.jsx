@@ -4,7 +4,7 @@ import banner from "../../public/newbanner.png"
 const Banner = () => {
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
+      <div className="max-w-screen-2xl container mx-auto ml-5 md:px-20 px-4 flex flex-col md:flex-row my-10">
         <div className="w-full md:w-1/2 mt-12 md:mt-32 order-2 md:order-1">
           <div className="space-y-12">
             <h1 className="text-4xl font-bold">
