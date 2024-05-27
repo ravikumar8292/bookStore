@@ -1,10 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate,useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
 
 const Login = () => {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/"
+
   const {
     register,
     handleSubmit,
@@ -25,6 +30,11 @@ const Login = () => {
 
         if (data) {
           toast.success('Login Successfully.');
+          // document.getElementById("my_model_3").close();
+          navigate(from, {replace:true});
+          setTimeout(()=>{
+            window.location.reload();
+          },2000)
         }
 
         const { email, password } = data;
@@ -32,16 +42,18 @@ const Login = () => {
           email,
           password,
         };
-        console.log("userData", userData);
         localStorage.setItem("Users", JSON.stringify(userData));
+        console.log("userData", userData);
 
       } catch (err) {
         if (err.response) {
           console.error(err);
           toast.error("Error " + err.response.data.message);
+          setTimeout(()=>{});
         } else {
           console.error(err);
-          toast.error("An unexpected error occurred.")
+          toast.error("An unexpected error occurred.");
+          setTimeout(()=>{});
           
         }
       }
@@ -88,9 +100,10 @@ const Login = () => {
               )}
             </div>
             <div className="flex justify-between">
-              <button className="px-8 py-1 rounded-md mt-6 bg-pink-500 text-white text-md hover:bg-pink-600 duration-200">
+              <Link to={"/"} className="px-4 pt-2 rounded-md mt-6 bg-pink-500 text-white text-md hover:bg-pink-600 duration-200"
+              onClick={handleSubmit(onSubmit)}>
                 Login
-              </button>
+              </Link>
               <p className="mt-12 mr-8">
                 Not registered?{" "}
                 <Link

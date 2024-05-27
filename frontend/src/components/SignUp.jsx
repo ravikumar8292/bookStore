@@ -1,11 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation,useNavigate } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
 
 const SignUp = () => {
+  
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/"
+
   const {
     register,
     handleSubmit,
@@ -26,6 +31,10 @@ const SignUp = () => {
 
       if (data) {
         toast.success('SignUp Successfully.');
+        navigate(from, {replace:true});
+        setTimeout(()=>{
+          window.location.reload();
+        },2000)
       }
 
       const { fullname, email, password } = data;
@@ -50,9 +59,9 @@ const SignUp = () => {
 
   return (
     <div>
-      <div className="flex justify-center h-screen items-center">
+      <div className={`flex justify-center h-screen items-center`}>
         <div className="flex justify-center w-full">
-          <div className="modal-box dark:border dark:shadow-2xl">
+          <div className="modal-box dark:bg-slate-900 dark:text-white dark:border dark:shadow-2xl">
             <form onSubmit={handleSubmit(onSubmit)} method="dialog">
               {/* if there is a button in form, it will close the modal */}
               <Link
