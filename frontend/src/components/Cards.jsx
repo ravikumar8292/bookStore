@@ -1,5 +1,5 @@
 import React from "react";
-
+// item comes from freebook.jsx
 const Cards = ({item}) => {
     // console.log(item);
   return (
